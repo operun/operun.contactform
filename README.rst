@@ -1,6 +1,12 @@
-================
+.. image:: https://travis-ci.org/operun/operun.contactform.svg?branch=master
+    :target: https://travis-ci.org/operun/operun.contactform
+
+.. image:: https://coveralls.io/repos/github/operun/operun.contactform/badge.svg?branch=master
+    :target: https://coveralls.io/github/operun/operun.contactform?branch=master
+
+===================
 operun Contact-Form
-================
+===================
 
 The operun Contact-Form Add-On.
 
@@ -31,8 +37,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/operun.contactform/issues
-- Source Code: https://github.com/collective/operun.contactform
+- Issue Tracker: https://github.com/operun/operun.contactform/issues
+- Source Code: https://github.com/operun/operun.contactform
 
 
 License
