@@ -11,7 +11,7 @@
       layer="operun.contactform.interfaces.IOperunContactformLayer"
       />
 
-  <plone:resourceDirectory
+  <browser:resourceDirectory
       directory="static"
       name="operun.contactform"
       />

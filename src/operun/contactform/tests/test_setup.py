@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
 
-import unittest
-
 from operun.contactform.testing import OPERUN_CONTACTFORM_INTEGRATION_TESTING
 from plone import api
-from plone.app.testing import TEST_USER_ID, setRoles
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+
+import unittest
 
 
 class TestSetup(unittest.TestCase):

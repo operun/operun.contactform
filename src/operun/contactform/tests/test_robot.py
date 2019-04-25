@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import os
-import unittest
-
-import robotsuite
 from operun.contactform.testing import OPERUN_CONTACTFORM_ACCEPTANCE_TESTING
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
+
+import os
+import robotsuite
+import unittest
 
 
 def test_suite():
