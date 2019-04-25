@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="operun.contactform">
+
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <browser:jbot
+      directory="overrides"
+      layer="operun.contactform.interfaces.IOperunContactformLayer"
+      />
+
+  <plone:resourceDirectory
+      directory="static"
+      name="operun.contactform"
+      />
+
+</configure>
