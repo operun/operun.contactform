@@ -10,11 +10,190 @@
 @screen-md-max: 1199px;
 @screen-lg-min: 1200px;
 
-/* Vendor */
+/* Colours */
+@contactform-green: #4CAF50;
+@contactform-black: #031B4E;
+@contactform-slate: #4E5F83;
+@contactform-grey: #CCC;
+
 .vendor(@property, @value) {
      -moz-@{property}: @value;
       -ms-@{property}: @value;
        -o-@{property}: @value;
   -webkit-@{property}: @value;
           @{property}: @value;
+}
+
+#contactform {
+  margin: 60px 0;
+
+  .icon-legend {
+    color: @contactform-black;
+    margin-bottom: 50px;
+    position: relative;
+
+    i {
+      float: left;
+      font-size: 24px;
+      height: 100%;
+      padding: 3px 0;
+      position: absolute;
+    }
+
+    span, p {
+      color: @contactform-slate;
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 2;
+      margin-left: 50px;
+    }
+  }
+
+  .documentFirstHeading {
+    border: none;
+    color: @contactform-black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .documentDescription {
+    color: @contactform-slate;
+    font-weight: normal;
+    margin-bottom: 60px;
+  }
+
+  button, a {
+    &.contactform-btn {
+      background-color: white;
+      border: 1px solid @contactform-slate;
+      border-radius: 0;
+      box-shadow: 0 2px 4px rgba(3,27,78,.06);
+      color: @contactform-slate;
+      display: inline-block;
+      font-weight: normal;
+      padding: 10px 30px;
+      text-decoration: none;
+      text-shadow: none;
+
+      .vendor(transition, all 100ms ease-in-out);
+
+      &:hover {
+        background-color: @contactform-black;
+        border-color: @contactform-black;
+        box-shadow: 0 2px 4px rgba(3,27,78,.08);
+        color: white;
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 10px;
+      max-width: 100%;
+
+      &.error {
+        + input,
+        + select,
+        + textarea {
+          background-color: rgba(255,0,0,.0125);
+          border-color: red !important;
+        }
+      }
+
+      &.required:after {
+        color: red;
+        content: '*';
+        margin-left: 4px;
+      }
+
+      &.checkbox-label {
+        &.error {
+          color: red;
+        }
+      }
+    }
+
+    .checkbox-text {
+      font-weight: normal;
+      margin-left: 30px;
+    }
+
+    select {
+      font-weight: normal;
+      padding: 4px;
+      width: 100%;
+    }
+
+    input[type="checkbox"] {
+      border: 1px solid @contactform-grey;
+      float: left;
+      height: 20px;
+      margin: 0;
+      position: relative;
+      width: 20px;
+
+      .vendor(appearance, none);
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:checked {
+        border-color: @contactform-black;
+
+        &:after {
+          background-color: @contactform-black;
+          content: '';
+          height: 10px;
+          left: 4px;
+          position: absolute;
+          top: 4px;
+          width: 10px;
+        }
+      }
+    }
+
+    .form-control {
+      border-radius: 0;
+      box-shadow: none;
+      font-weight: normal;
+
+      &:focus {
+        border-color: @contactform-black;
+        outline: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  .success-wrapper {
+    text-align: center;
+
+    .success-icon {
+      color: @contactform-green;
+      font-size: 75px;
+    }
+
+    .success-text {
+      margin-bottom: 80px;
+
+      h1 {
+        color: @contactform-black;
+      }
+
+      p {
+        color: @contactform-slate;
+        font-size: 20px;
+      }
+    }
+  }
 }

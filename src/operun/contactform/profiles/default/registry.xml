@@ -21,4 +21,22 @@
     <value key="depends">plone</value>
   </records>
 
+  <!-- Configure -->
+
+  <record name="plone.smtp_host">
+    <value>sslout.df.eu</value>
+  </record>
+
+  <record name="plone.smtp_userid">
+    <value>demo@operun.de</value>
+  </record>
+
+  <record name="plone.email_from_name">
+    <value>demo</value>
+  </record>
+
+  <record name="plone.email_from_address">
+    <value>demo@operun.de</value>
+  </record>
+
 </registry>
