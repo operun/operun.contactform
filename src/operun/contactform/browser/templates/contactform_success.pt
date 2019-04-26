@@ -9,7 +9,7 @@
 <body>
 
   <metal:fill fill-slot="main">
-    <div id="contactform">
+    <div id="contactform-wrapper">
 
       <div class="col-md-4"></div>
 
