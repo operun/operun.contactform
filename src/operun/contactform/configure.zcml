@@ -6,7 +6,7 @@
     i18n_domain="operun.contactform">
 
   <i18n:registerTranslations directory="locales" />
-  
+
   <include package=".browser" />
 
   <genericsetup:registerProfile
@@ -16,6 +16,15 @@
       description="Installs the operun Contact-Form Add-On."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="testing"
+      title="operun Contact-Form (testing)"
+      directory="profiles/testing"
+      description="Installs the operun Contact-Form Add-On."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.testing"
       />
 
   <genericsetup:registerProfile

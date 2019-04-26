@@ -19,3 +19,8 @@ def post_install(context):
 def uninstall(context):
     """Uninstall script"""
     # Do something at the end of the uninstallation of this package.
+
+
+def testing(context):
+    """Testing install script"""
+    # Methods run during testing profile install

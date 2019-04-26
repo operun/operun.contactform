@@ -7,6 +7,7 @@ from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
+from plone.app.testing import MOCK_MAILHOST_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import SITE_OWNER_NAME
 from plone.app.testing import SITE_OWNER_PASSWORD
@@ -99,7 +100,10 @@ OPERUN_CONTACTFORM_INTEGRATION_TESTING = IntegrationTesting(
 
 
 OPERUN_CONTACTFORM_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(OPERUN_CONTACTFORM_TESTING_FIXTURE,),
+    bases=(
+        OPERUN_CONTACTFORM_TESTING_FIXTURE,
+        MOCK_MAILHOST_FIXTURE,
+    ),
     name='OperunContactformLayer:FunctionalTesting',
 )
 
