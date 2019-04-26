@@ -117,8 +117,8 @@ class ContactFormView(BrowserView):
                 # We use MIMEMultipart to create an HTML
                 # Content-Disposition header.
                 # See: https://docs.plone.org/develop/plone.api/docs/portal.html#send-e-mail  # noqa: 501
-                message = MIMEMultipart()
-                part = MIMEText(mail_body, 'html')
+                message = MIMEMultipart('alternative')
+                part = MIMEText(mail_body, 'html', 'utf-8')
                 message.attach(part)
                 # We attempt to send the E-Mail, note we don't use "immediate"
                 # as this can fail in a production environment.

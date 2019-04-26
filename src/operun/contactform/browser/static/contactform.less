@@ -16,6 +16,9 @@
 @contactform-slate: #4E5F83;
 @contactform-grey: #CCC;
 
+/* Effects */
+@contactform-shadow: 0 2px 4px rgba(3,27,78,.08);
+
 .vendor(@property, @value) {
      -moz-@{property}: @value;
       -ms-@{property}: @value;
@@ -24,8 +27,18 @@
           @{property}: @value;
 }
 
-#contactform {
+#contactform-wrapper {
+  display: inline-block;
   margin: 60px 0;
+  width: 100%;
+
+  .header-wrapper {
+    width: 50%;
+  }
+
+  .form-section {
+    position: absolute;
+  }
 
   .icon-legend {
     color: @contactform-black;
@@ -50,11 +63,24 @@
     }
   }
 
+  .image-legend {
+    img {
+      border: 1px solid @contactform-grey;
+      box-shadow: @contactform-shadow;
+      height: auto;
+      width: 100%;
+    }
+  }
+
   .documentFirstHeading {
     border: none;
     color: @contactform-black;
     margin: 0;
     padding: 0;
+
+    h1 {
+      margin: 0 0 15px 0;
+    }
   }
 
   .documentDescription {
@@ -68,7 +94,7 @@
       background-color: white;
       border: 1px solid @contactform-slate;
       border-radius: 0;
-      box-shadow: 0 2px 4px rgba(3,27,78,.06);
+      box-shadow: @contactform-shadow;
       color: @contactform-slate;
       display: inline-block;
       font-weight: normal;
@@ -81,7 +107,6 @@
       &:hover {
         background-color: @contactform-black;
         border-color: @contactform-black;
-        box-shadow: 0 2px 4px rgba(3,27,78,.08);
         color: white;
       }
     }
@@ -91,6 +116,7 @@
     margin-bottom: 15px;
 
     label {
+      color: @contactform-slate;
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
@@ -166,6 +192,7 @@
 
       &:focus {
         border-color: @contactform-black;
+        box-shadow: @contactform-shadow;
         outline: 0;
       }
     }
@@ -194,6 +221,32 @@
         color: @contactform-slate;
         font-size: 20px;
       }
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  #contactform-wrapper {
+    .header-section {
+      .header-wrapper {
+        width: 100%;
+
+        .documentDescription {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .info-section {
+      .icon-legend {
+        margin: 0 auto 50px auto;
+        max-width: 200px;
+      }
+    }
+
+    .form-section {
+      margin-bottom: 60px;
+      position: relative;
     }
   }
 }
