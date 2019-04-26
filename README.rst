@@ -10,6 +10,9 @@ operun Contact-Form
 
 The operun Contact-Form Add-On.
 
+.. image:: https://raw.githubusercontent.com/operun/operun.contactform/images/contactform_diagram.png
+    :target: https://raw.githubusercontent.com/operun/operun.contactform/images/contactform_diagram.png
+
 
 Translations
 ------------
