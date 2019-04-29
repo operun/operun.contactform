@@ -64,12 +64,17 @@ class OperunContactformLayer(PloneSandboxLayer):
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
+        import collective.MockMailHost
+
         request = aq_get(app, 'REQUEST')
         request.environ['HTTP_ACCEPT_LANGUAGE'] = 'de'
         self.loadZCML(package=operun.contactform)
+        self.loadZCML(package=collective.MockMailHost)
+        z2.installProduct(app, 'collective.MockMailHost')
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'operun.contactform:default')
+        applyProfile(portal, 'collective.MockMailHost:default')
         portal.acl_users.userFolderAddUser(
             SITE_OWNER_NAME, SITE_OWNER_PASSWORD, ['Manager'], []
         )
@@ -100,10 +105,7 @@ OPERUN_CONTACTFORM_INTEGRATION_TESTING = IntegrationTesting(
 
 
 OPERUN_CONTACTFORM_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(
-        OPERUN_CONTACTFORM_TESTING_FIXTURE,
-        MOCK_MAILHOST_FIXTURE,
-    ),
+    bases=(OPERUN_CONTACTFORM_TESTING_FIXTURE, MOCK_MAILHOST_FIXTURE),
     name='OperunContactformLayer:FunctionalTesting',
 )
 
