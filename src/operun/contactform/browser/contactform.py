@@ -120,9 +120,9 @@ class ContactFormView(BrowserView):
                 message = MIMEMultipart('alternative')
                 part = MIMEText(mail_body, 'html', 'utf-8')
                 message.attach(part)
-                # We attempt to send the E-Mail, note we don't use "immediate"
-                # as this can fail in a production environment.
+                # We attempt to send the E-Mail
                 api.portal.send_email(
+                    immediate=True,
                     body=message.as_string(),
                     subject=mailing_list[user]['subject'],
                     sender=mailing_list[user]['sender'],

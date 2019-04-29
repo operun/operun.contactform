@@ -105,12 +105,12 @@
 
           <div class="icon-legend">
             <i class="glyphicon glyphicon-envelope"></i>
-            <span i18n:ignore="">info@operun.de</span>
+            <a href="mailto:info@operun.de" i18n:ignore="">info@operun.de</a>
           </div>
 
           <div class="icon-legend">
             <i class="glyphicon glyphicon-phone"></i>
-            <span i18n:ignore="">+49 8071 52723</span>
+            <a href="tel:+49 8071 52723" i18n:ignore="">+49 8071 52723</a>
           </div>
 
           <div class="icon-legend">
