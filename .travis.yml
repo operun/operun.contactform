@@ -5,6 +5,8 @@ cache:
   directories:
   - eggs
   - downloads
+addons:
+  firefox: "57.0"
 python:
   - "2.7"
 matrix:
@@ -15,6 +17,7 @@ before_install:
   - tar -xzf geckodriver-v0.23.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
 install:
+  - npm install selenium-webdriver@^3.11.0
   - virtualenv -p `which python` .
   - bin/pip install -r requirements.txt
   - bin/buildout -N buildout:download-cache=downloads code-analysis:return-status-codes=True annotate
