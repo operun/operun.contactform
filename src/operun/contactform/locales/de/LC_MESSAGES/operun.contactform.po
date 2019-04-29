@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-26 11:32+0000\n"
+"POT-Creation-Date: 2019-04-29 07:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgstr "Datenschutzerklärung zur Kenntnis genommen und akzeptiert."
 #. Default: "By checking this box, you understand and agree that this form collects your name, company, phone and E-Mail, so we can correspond with you."
 #: operun/contactform/browser/templates/contactform.pt
 msgid "contactform_dsgvo_message"
-msgstr "Wenn Sie dieses Kontrollkästchen aktivieren, erklären Sie sich damit einverstanden, dass dieses Formular Ihren Namen, Ihr Firma, Ihre Telefonnummer und Ihre E-Mail-Adresse erfasst, damit wir mit Ihnen korrespondieren können."
+msgstr "Wenn Sie dieses Kontrollkästchen aktivieren, erklären Sie sich damit einverstanden, dass dieses Formular Ihren Namen, Ihr Firma, Ihre Telefonnummer und Ihre E-Mail-Adresse erfasst, just: dass dieses Formular die eingegebenen Daten erfasst, damit wir mit Ihnen korrespondieren können."
 
 #. Default: "E-Mail"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
@@ -119,7 +119,7 @@ msgstr "Frau"
 #. Default: "Your Message"
 #: operun/contactform/browser/mail_templates/mailto_user.pt
 msgid "contactform_your_message"
-msgstr "Deine Nachricht"
+msgstr "Ihre Nachricht"
 
 #. Default: "You received a new message."
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
@@ -141,7 +141,7 @@ msgstr "operun Contact-Form"
 
 #: operun/contactform/configure.zcml
 msgid "operun Contact-Form (testing)"
-msgstr "operun Contact-Form (testen)"
+msgstr "operun Contact-Form (testing)"
 
 #. Default: "Back to Homepage"
 #: operun/contactform/browser/templates/contactform_success.pt
@@ -151,7 +151,7 @@ msgstr "Zurück zur Startseite"
 #. Default: "Your message was successfully sent."
 #: operun/contactform/browser/templates/contactform_success.pt
 msgid "success_text_message"
-msgstr "Deine Nachricht wurde erfolgreich gesendet."
+msgstr "Ihre Nachricht wurde erfolgreich gesendet."
 
 #. Default: "Sent!"
 #: operun/contactform/browser/templates/contactform_success.pt
