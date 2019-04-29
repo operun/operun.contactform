@@ -35,24 +35,18 @@ I navigate to the Contact-Form
 
 I fill the form fields without checking the DSGVO compliance
     Input Text  firstname  Max
-    Sleep  1s
     Input Text  lastname  Mustermann
-    Sleep  1s
     Input Text  email  max.mustermann@example.com
-    Sleep  1s
     Input Text  subject  We ♥ Plone
-    Sleep  1s
     Input Text  message  Plone «ταБЬℓσ»: 1<2 & 4+1>3, is 100% awesome!
 
 I try submitting without checking the DSGVO compliance
-    Sleep  2s
     Focus  //button[@name="form.buttons.submit"]
     Click Element  //button[@name="form.buttons.submit"]
 
 I try submitting after checking the DSGVO compliance
     Focus  //button[@name="form.buttons.submit"]
     Select Checkbox  //input[@name="dsgvo"]
-    Sleep  2s
     Click Element  //button[@name="form.buttons.submit"]
 
 I should see an error message
