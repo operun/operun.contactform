@@ -18,6 +18,7 @@
 
 /* Effects */
 @contactform-shadow: 0 2px 4px rgba(3,27,78,.08);
+@contactform-animation: 100ms ease-in-out;
 
 .vendor(@property, @value) {
      -moz-@{property}: @value;
@@ -102,7 +103,7 @@
       text-decoration: none;
       text-shadow: none;
 
-      .vendor(transition, all 100ms ease-in-out);
+      .vendor(transition, all @contactform-animation);
 
       &:hover {
         background-color: @contactform-black;
@@ -157,6 +158,7 @@
     }
 
     input[type="checkbox"] {
+      background-color: white;
       border: 1px solid @contactform-grey;
       float: left;
       height: 20px;
@@ -166,8 +168,22 @@
 
       .vendor(appearance, none);
 
+      .vendor(transition, border-color @contactform-animation);
+
       &:focus {
         outline: 0;
+      }
+
+      &:after {
+        background-color: white;
+        content: '';
+        height: 10px;
+        left: 4px;
+        position: absolute;
+        top: 4px;
+        width: 10px;
+
+        .vendor(transition, background-color @contactform-animation);
       }
 
       &:checked {
@@ -175,12 +191,6 @@
 
         &:after {
           background-color: @contactform-black;
-          content: '';
-          height: 10px;
-          left: 4px;
-          position: absolute;
-          top: 4px;
-          width: 10px;
         }
       }
     }
