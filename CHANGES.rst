@@ -7,5 +7,11 @@ Changelog
 
 Added:
 
+- Added HTML E-Mail templates.
+	[Netroxen]
+
+- Added Python & Selenium-Browser tests.
+	[Netroxen]
+
 - Initial release.
   [Netroxen]
