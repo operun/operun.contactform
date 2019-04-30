@@ -29,20 +29,42 @@
                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td>
+
                       <p i18n:translate="mailto_admin_message">You received a new message.</p>
+
                       <hr>
-                      <h3 i18n:translate="contactform_name">Name</h3>
-                      <p>
-                        <span tal:content="options/title/title|nothing"></span> <span tal:content="options/firstname|nothing"></span> <span tal:content="options/lastname|nothing"></span>
-                      </p>
-                      <h3 i18n:translate="contactform_company">Company</h3>
-                      <p tal:content="options/company|nothing"></p>
-                      <h3 i18n:translate="contactform_phone">Phone</h3>
-                      <p tal:content="options/phone|nothing"></p>
-                      <h3 i18n:translate="contactform_email">E-Mail</h3>
-                      <p tal:content="options/email|nothing"></p>
-                      <h3 i18n:translate="contactform_message">Message</h3>
-                      <p tal:content="options/message|nothing"></p>
+
+                      <tal:condition tal:define="firstname options/firstname|nothing;
+                                                 lastname options/lastname|nothing"
+                                     tal:condition="firstname|lastname|nothing">
+                        <h3 i18n:translate="contactform_name">Name</h3>
+                        <p>
+                          <span tal:content="options/title/title|nothing"></span>
+                          <span tal:content="firstname"></span>
+                          <span tal:content="lastname"></span>
+                        </p>
+                      </tal:condition>
+
+                      <tal:condition tal:define="company options/company|nothing" tal:condition="company">
+                        <h3 i18n:translate="contactform_company">Company</h3>
+                        <p tal:content="company"></p>
+                      </tal:condition>
+
+                      <tal:condition tal:define="phone options/phone|nothing" tal:condition="phone">
+                        <h3 i18n:translate="contactform_phone">Phone</h3>
+                        <p tal:content="phone"></p>
+                      </tal:condition>
+
+                      <tal:condition tal:define="email options/email|nothing" tal:condition="email">
+                        <h3 i18n:translate="contactform_email">E-Mail</h3>
+                        <p tal:content="email"></p>
+                      </tal:condition>
+
+                      <tal:condition tal:define="message options/message|nothing" tal:condition="message">
+                        <h3 i18n:translate="contactform_message">Message</h3>
+                        <p tal:content="message"></p>
+                      </tal:condition>
+
                     </td>
                   </tr>
                 </table>
