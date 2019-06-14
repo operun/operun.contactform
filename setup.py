@@ -16,7 +16,7 @@ long_description = '\n\n'.join(
 
 setup(
     name='operun.contactform',
-    version='1.0.0a2.dev0',
+    version='1.0.0a2',
     description="A Plone Contact-Form Add-On.",
     long_description=long_description,
     classifiers=[
