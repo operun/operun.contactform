@@ -11,9 +11,10 @@
 @screen-lg-min: 1200px;
 
 /* Colours */
+@brand-blue: #0077C8;
 @contactform-green: #4CAF50;
-@contactform-black: #031B4E;
-@contactform-slate: #4E5F83;
+@contactform-black: #2F3334;
+@contactform-slate: #616161;
 @contactform-grey: #CCC;
 
 /* Effects */
@@ -94,10 +95,10 @@
   button, a {
     &.contactform-btn {
       background-color: white;
-      border: 1px solid @contactform-slate;
+      border: 1px solid @brand-blue;
       border-radius: 0;
       box-shadow: @contactform-shadow;
-      color: @contactform-slate;
+      color: @brand-blue;
       display: inline-block;
       font-weight: normal;
       padding: 10px 30px;
@@ -107,8 +108,8 @@
       .vendor(transition, all @contactform-animation);
 
       &:hover {
-        background-color: @contactform-black;
-        border-color: @contactform-black;
+        background-color: @brand-blue;
+        border-color: @brand-blue;
         color: white;
       }
     }
@@ -116,6 +117,11 @@
 
   .form-group {
     margin-bottom: 15px;
+
+    a {
+      color: @contactform-black;
+      text-decoration: none;
+    }
 
     label {
       color: @contactform-slate;
@@ -150,6 +156,7 @@
     .checkbox-text {
       font-weight: normal;
       margin-left: 30px;
+      font-size: 12px;
     }
 
     select {
@@ -188,10 +195,10 @@
       }
 
       &:checked {
-        border-color: @contactform-black;
+        border-color: @brand-blue;
 
         &:after {
-          background-color: @contactform-black;
+          background-color: @brand-blue;
         }
       }
     }
@@ -202,7 +209,7 @@
       font-weight: normal;
 
       &:focus {
-        border-color: @contactform-black;
+        border-color: @brand-blue;
         box-shadow: @contactform-shadow;
         outline: 0;
       }

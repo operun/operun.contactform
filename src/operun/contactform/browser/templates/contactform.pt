@@ -9,7 +9,7 @@
 <body>
 
   <metal:fill fill-slot="main">
-    <div id="contactform-wrapper">
+    <div id="contactform-wrapper" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
       <div class="row">
 
         <div class="header-section col-md-12 col-lg-offset-1">
@@ -32,7 +32,7 @@
 
             <div class="row">
 
-              <div class="col-sm-2 col-md-2">
+              <div class="col-sm-3 col-md-3">
                 <div class="form-group">
                   <label class="${python:view.get_classname('title')}" for="title" i18n:translate="contactform_title">Title</label>
                   <div>
@@ -44,17 +44,10 @@
                 </div>
               </div>
 
-              <div class="col-sm-5 col-md-5">
+              <div class="col-sm-9 col-md-9">
                 <div class="form-group">
-                  <label class="${python:view.get_classname('firstname')}" for="firstname" i18n:translate="contactform_firstname">Firstname</label>
-                  <input type="text" class="form-control" name="firstname" value="${request/firstname|nothing}">
-                </div>
-              </div>
-
-              <div class="col-sm-5 col-md-5">
-                <div class="form-group">
-                  <label class="${python:view.get_classname('lastname')}" for="lastname" i18n:translate="contactform_lastname">Lastname</label>
-                  <input type="text" class="form-control" name="lastname" value="${request/lastname|nothing}">
+                  <label class="${python:view.get_classname('name')}" for="name" i18n:translate="contactform_name">Name</label>
+                  <input type="text" class="form-control" name="name" value="${request/name|nothing}">
                 </div>
               </div>
 
@@ -88,8 +81,10 @@
             <div class="form-group">
               <input type="checkbox" name="dsgvo" value="0" />
               <div class="checkbox-text">
-                <label class="${python:view.get_classname('dsgvo', 'checkbox-label')}" for="dsgvo" i18n:translate="contactform_dsgvo_checkbox_label">
+                <label class="${python:view.get_classname('dsgvo', 'checkbox-label')}" for="dsgvo">
+                  <a href="${navroot}/datenschutzerklaerung" i18n:translate="contactform_dsgvo_checkbox_label">
                   You acknowledge and accept our privacy policy.
+                  </a>
                 </label>
                 <div i18n:translate="contactform_dsgvo_message">By checking this box, you understand and agree that this form collects your name, company, phone and E-Mail, so we can correspond with you.</div>
               </div>

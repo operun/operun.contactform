@@ -34,8 +34,7 @@ I navigate to the Contact-Form
     Wait Until Element Is Visible  xpath=(//form[@id="contactform"])
 
 I fill the form fields without checking the DSGVO compliance
-    Input Text  firstname  Max
-    Input Text  lastname  Mustermann
+    Input Text  name  Max Mustermann
     Input Text  email  max.mustermann@example.com
     Input Text  subject  We ♥ Plone
     Input Text  message  Plone «ταБЬℓσ»: 1<2 & 4+1>3, is 100% awesome!

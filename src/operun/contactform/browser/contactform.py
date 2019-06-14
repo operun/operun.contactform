@@ -27,8 +27,7 @@ class ContactFormView(BrowserView):
 
     form_fields = [
         ('title', False),
-        ('firstname', True),
-        ('lastname', True),
+        ('name', True),
         ('company', False),
         ('phone', False),
         ('email', True),

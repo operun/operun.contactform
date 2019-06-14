@@ -35,15 +35,14 @@ class TestContactForm(unittest.TestCase):
         logout()
         self.assertTrue(self.view())
         # Contains specified form elements
-        self.assertEqual(self.view().count('form-group'), 9)
+        self.assertEqual(self.view().count('form-group'), 8)
 
     def test_contact_view_submit(self):
         contact_url = self.portal.absolute_url() + '/contact'
         self.browser.open(contact_url)
         validation_error = 'Something went wrong, please check the input!'
         # Submit with missing required field
-        self.browser.getControl(name='firstname').value = 'Max'
-        self.browser.getControl(name='lastname').value = 'Mustermann'
+        self.browser.getControl(name='name').value = 'Max Mustermann'
         self.browser.getControl(name='subject').value = 'We ♥ Plone'
         self.browser.getControl(
             name='message'
@@ -52,8 +51,7 @@ class TestContactForm(unittest.TestCase):
         self.browser.getControl(name='form.buttons.submit').click()
         self.assertIn(validation_error, self.browser.contents)
         # Form should fill fields from request
-        self.assertTrue(self.browser.getControl(name='firstname').value)
-        self.assertTrue(self.browser.getControl(name='lastname').value)
+        self.assertTrue(self.browser.getControl(name='name').value)
         # DSGVO checkbox should reset
         self.assertFalse(self.browser.getControl(name='dsgvo').value)
         # Submit with incorrect E-Mail format
@@ -78,5 +76,5 @@ class TestContactForm(unittest.TestCase):
         user_msg = self.portal.MailHost.messages[1]
         self.assertIn('max.mustermann@example.com', admin_msg)
         self.assertIn(
-            'Hello <span>Max</span> <span>Mustermann</span>', user_msg
+            'Hello <span>Max Mustermann</span>', user_msg
         )
