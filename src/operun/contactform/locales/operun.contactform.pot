@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-29 07:45+0000\n"
+"POT-Creation-Date: 2019-06-14 14:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,16 +57,6 @@ msgstr ""
 msgid "contactform_email"
 msgstr ""
 
-#. Default: "Firstname"
-#: operun/contactform/browser/templates/contactform.pt
-msgid "contactform_firstname"
-msgstr ""
-
-#. Default: "Lastname"
-#: operun/contactform/browser/templates/contactform.pt
-msgid "contactform_lastname"
-msgstr ""
-
 #. Default: "Message"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
 #: operun/contactform/browser/templates/contactform.pt
@@ -75,6 +65,7 @@ msgstr ""
 
 #. Default: "Name"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
+#: operun/contactform/browser/templates/contactform.pt
 msgid "contactform_name"
 msgstr ""
 
@@ -129,7 +120,7 @@ msgstr ""
 msgid "mailto_admin_message"
 msgstr ""
 
-#. Default: "Hello ${firstname} ${lastname}, we will process your request as quickly as possible. This is an automatically generated E-Mail, please do not answer."
+#. Default: "Hello ${name}, we will process your request as quickly as possible. This is an automatically generated E-Mail, please do not answer."
 #: operun/contactform/browser/mail_templates/mailto_user.pt
 msgid "mailto_user_message"
 msgstr ""

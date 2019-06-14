@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-29 07:45+0000\n"
+"POT-Creation-Date: 2019-06-14 14:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,23 +46,13 @@ msgstr "Datenschutzerklärung zur Kenntnis genommen und akzeptiert."
 #. Default: "By checking this box, you understand and agree that this form collects your name, company, phone and E-Mail, so we can correspond with you."
 #: operun/contactform/browser/templates/contactform.pt
 msgid "contactform_dsgvo_message"
-msgstr "Wenn Sie dieses Kontrollkästchen aktivieren, erklären Sie sich damit einverstanden, dass dieses Formular Ihren Namen, Ihr Firma, Ihre Telefonnummer und Ihre E-Mail-Adresse erfasst, just: dass dieses Formular die eingegebenen Daten erfasst, damit wir mit Ihnen korrespondieren können."
+msgstr "Wenn Sie dieses Kontrollkästchen aktivieren, erklären Sie sich damit einverstanden, dass dieses Formular Ihren Namen, Ihre Firma, Ihre Telefonnummer und Ihre E-Mail-Adresse erfasst, damit wir mit Ihnen korrespondieren können."
 
 #. Default: "E-Mail"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
 #: operun/contactform/browser/templates/contactform.pt
 msgid "contactform_email"
 msgstr "E-Mail"
-
-#. Default: "Firstname"
-#: operun/contactform/browser/templates/contactform.pt
-msgid "contactform_firstname"
-msgstr "Vorname"
-
-#. Default: "Lastname"
-#: operun/contactform/browser/templates/contactform.pt
-msgid "contactform_lastname"
-msgstr "Nachname"
 
 #. Default: "Message"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
@@ -72,6 +62,7 @@ msgstr "Nachricht"
 
 #. Default: "Name"
 #: operun/contactform/browser/mail_templates/mailto_admin.pt
+#: operun/contactform/browser/templates/contactform.pt
 msgid "contactform_name"
 msgstr "Name"
 
@@ -126,10 +117,11 @@ msgstr "Ihre Nachricht"
 msgid "mailto_admin_message"
 msgstr "Sie haben eine neue Nachricht erhalten."
 
-#. Default: "Hello ${firstname} ${lastname}, we will process your request as quickly as possible. This is an automatically generated E-Mail, please do not answer."
+#. Default: "Hello ${name}, we will process your request as quickly as possible. This is an automatically generated E-Mail, please do not answer."
 #: operun/contactform/browser/mail_templates/mailto_user.pt
+#, fuzzy
 msgid "mailto_user_message"
-msgstr "Hallo ${firstname} ${lastname}, wir werden Ihre Anfrage so schnell wie möglich bearbeiten. Dies ist eine automatisch generierte E-Mail, bitte antworten Sie nicht."
+msgstr "Hallo ${name}, wir werden Ihre Anfrage so schnell wie möglich bearbeiten. Dies ist eine automatisch generierte E-Mail, bitte antworten Sie nicht."
 
 #: operun/contactform/configure.zcml
 msgid "operun Contac-Form (uninstall)"
