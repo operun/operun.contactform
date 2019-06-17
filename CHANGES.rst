@@ -10,6 +10,9 @@ Added:
 - Added field error class to DSGVO checkbox.
 	[Netroxen]
 
+- Added /contact-info URL override.
+	[Netroxen]
+
 Changed:
 
 - Removed box-shadow from buttons and inputs.
