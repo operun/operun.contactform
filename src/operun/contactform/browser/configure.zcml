@@ -19,11 +19,19 @@
   <!-- Views -->
 
   <browser:page
-      name="contact"
-      for="*"
-      class=".contactform.ContactFormView"
-      permission="zope2.View"
-      />
+    name="contact"
+    for="*"
+    class=".contactform.ContactFormView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="contact-info"
+    for="*"
+    class=".contactform.ContactFormView"
+    layer="operun.contactform.interfaces.IOperunContactformLayer"
+    permission="zope2.View"
+    />
 
   <!-- Mail Views -->
 

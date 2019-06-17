@@ -12,7 +12,7 @@
     <div id="contactform-wrapper" tal:define="navroot context/@@plone_portal_state/navigation_root_url">
       <div class="row">
 
-        <div class="header-section col-md-12 col-lg-offset-1">
+        <div class="header-section col-md-10 col-lg-offset-1">
 
           <div class="header-wrapper">
             <div class="documentFirstHeading">
@@ -79,7 +79,7 @@
             </div>
 
             <div class="form-group">
-              <input type="checkbox" name="dsgvo" value="0" />
+              <input class="${python:view.get_classname('dsgvo')}" type="checkbox" name="dsgvo" value="0" />
               <div class="checkbox-text">
                 <label class="${python:view.get_classname('dsgvo', 'checkbox-label')}" for="dsgvo">
                   <a href="${navroot}/datenschutzerklaerung" i18n:translate="contactform_dsgvo_checkbox_label">

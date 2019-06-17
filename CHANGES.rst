@@ -5,7 +5,20 @@ Changelog
 1.0.0a3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+Added:
+
+- Added field error class to DSGVO checkbox.
+	[Netroxen]
+
+Changed:
+
+- Removed box-shadow from buttons and inputs.
+	[Netroxen]
+
+Fixed:
+
+- Fixed incorrect Bootstrap column width.
+	[Netroxen]
 
 
 1.0.0a2 (2019-06-14)
