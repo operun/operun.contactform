@@ -91,7 +91,7 @@ class ContactFormView(BrowserView):
             'admin': {
                 'template': '@@mailto_admin',
                 'subject': form_subject,
-                'sender': form_address,
+                'sender': portal_address,
                 'recipient': portal_address,
             },
             'user': {

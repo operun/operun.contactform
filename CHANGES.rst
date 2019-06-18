@@ -5,7 +5,10 @@ Changelog
 1.0.0a4 (unreleased)
 --------------------
 
-- Nothing changed yet.
+Changed:
+
+- from_address changed to portal_address for administrator E-Mail.
+	[Netroxen]
 
 
 1.0.0a3 (2019-06-17)
