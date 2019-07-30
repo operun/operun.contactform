@@ -39,4 +39,10 @@
     <value>demo@operun.de</value>
   </record>
 
+  <record name="operun.controlpanel.send_confirmation">
+    <value>True</value>
+  </record>
+
+  <records interface="operun.contactform.controlpanel.controlpanel.IControlPanel" prefix="operun.controlpanel"/>
+
 </registry>
