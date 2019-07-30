@@ -126,7 +126,7 @@ class ContactFormView(BrowserView):
         # template, and "send_email" configuration.
         send_confirmation = api.portal.get_registry_record(
             'operun.contactform.send_confirmation',
-            False
+            default=False
         )
         if send_confirmation:
             mailing_list = {
