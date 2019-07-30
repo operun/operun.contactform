@@ -85,22 +85,8 @@ class ContactFormView(BrowserView):
         )
         form_address = self.form.get('email', '')
         form_subject = self.form.get('subject', '')
-        # We create a list of recipients with their associated E-Mail
-        # template, and "send_email" configuration.
-        mailing_list = {
-            'admin': {
-                'template': '@@mailto_admin',
-                'subject': form_subject,
-                'sender': portal_address,
-                'recipient': portal_address,
-            },
-            'user': {
-                'template': '@@mailto_user',
-                'subject': u'operun contact confirmation',
-                'sender': portal_address,
-                'recipient': form_address,
-            },
-        }
+        mailing_list = self._build_mailing_list(form_address, form_subject,
+                                                portal_address)
         for user in mailing_list:
             try:
                 # We fetch the registered E-Mail template...
@@ -134,6 +120,39 @@ class ContactFormView(BrowserView):
             self.show_send_error_message()
             return False
         return True
+
+    def _build_mailing_list(self, form_address, form_subject, portal_address):
+        # We create a list of recipients with their associated E-Mail
+        # template, and "send_email" configuration.
+        send_confirmation = api.portal.get_registry_record(
+            'operun.contactform.send_confirmation',
+            False
+        )
+        if send_confirmation:
+            mailing_list = {
+                'admin': {
+                    'template': '@@mailto_admin',
+                    'subject': form_subject,
+                    'sender': portal_address,
+                    'recipient': portal_address,
+                },
+                'user': {
+                    'template': '@@mailto_user',
+                    'subject': u'operun contact confirmation',
+                    'sender': portal_address,
+                    'recipient': form_address,
+                },
+            }
+        else:
+            mailing_list = {
+                'admin': {
+                    'template': '@@mailto_admin',
+                    'subject': form_subject,
+                    'sender': portal_address,
+                    'recipient': portal_address,
+                }
+            }
+        return mailing_list
 
     def get_classname(self, field='', classname=''):
         """
